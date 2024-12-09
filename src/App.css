@@ -1,0 +1,32 @@
+.container {
+	display: flex; /* Align panels in a horizontal row */
+	flex-direction: column; /* Enable horizontal layout */
+	height: 100%; /* Full viewport height */
+	width: 100vh; /* Full width */
+	/* position: relative; Required for pinning */
+}
+
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.landing {
+	text-align: center;
+  height: 100vh;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.panelWrapper{
+  height: 100vh;
+}
+.panel{
+  height: 50vh
+}

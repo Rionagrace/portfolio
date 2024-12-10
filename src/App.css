@@ -6,7 +6,6 @@
 	/* position: relative; Required for pinning */
 }
 
-
 body {
 	display: flex;
 	align-items: center;
@@ -18,7 +17,7 @@ body {
 .landing {
 	display: flex;
 	align-items: center;
-  height: 100vh;
+	height: 100vh;
 	justify-content: space-around;
 	flex-direction: column;
 }
@@ -27,30 +26,77 @@ html {
 	scroll-behavior: smooth;
 }
 
-.panelWrapper{
-  height: 100vh;
+.panelWrapper {
+	height: 100vh;
 }
-.panel{
-  height: 50vh
+.panel {
+	height: 50vh;
 }
 
-.box{
+.box {
 	border-color: white;
 	border-color: white;
-  border-style: solid; 
-  border-width: 2px;   
+	border-style: solid;
+	border-width: 2px;
 	height: 50vh;
 	width: 100%;
 }
-.box img{
+.box img {
 	object-fit: cover;
 	width: 100%;
-  height: 100%;
+	height: 100%;
 }
 
-.projects{
+.projects {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	height: 250vh;      
+	height: 250vh;
+}
+
+.aboutMe {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	opacity: 0;
+	transform: translateY(-100%);
+	transition: all 0.3s ease-in-out;
+}
+
+.navbar.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: white;
 }

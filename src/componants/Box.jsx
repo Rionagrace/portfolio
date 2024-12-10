@@ -30,10 +30,10 @@ const Box = ({ project, link, github, image}) => {
 
 		>
 			<h1>{project}</h1>
-			<a href={link} target="_blank">
+			<button><a href={link} target="_blank">
 				Try it out
-			</a>
-			<a href={github} target="_blank">GitHub</a>
+			</a></button>
+			<button><a href={github} target="_blank">GitHub</a></button>
       <img src={image} />
 		</motion.div>
 	);

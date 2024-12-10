@@ -24,7 +24,7 @@ function NavBar() {
           <li><a href="#home">Home</a></li>
           <li><a href="#aboutMe">About Me</a></li>
           <li> <a href="#projects">Projects</a></li>
-          <li> <a href="#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 			</header>
 	);

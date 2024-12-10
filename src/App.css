@@ -40,6 +40,7 @@ html {
 	border-width: 2px;
 	height: 50vh;
 	width: 100%;
+	overflow: visible;
 }
 .box img {
 	object-fit: cover;
@@ -99,4 +100,12 @@ li a {
 
 li a:hover {
   background-color: white;
+}
+
+.logo{
+	height: 20vh;
+}
+
+.contact{
+	text-align: center;
 }

@@ -27,6 +27,7 @@ const Box = ({ project, link, github, image}) => {
 			variants={boxVariant}
 			initial="hidden"
 			animate={control}
+
 		>
 			<h1>{project}</h1>
 			<a href={link} target="_blank">

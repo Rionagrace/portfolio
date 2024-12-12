@@ -46,6 +46,7 @@ function App() {
 					<AboutMe></AboutMe>
 				</section>
 				<section id="projects" className="projects">
+					<h2>Projects</h2>
 					<Box
 						project="hisTOURy - build your own guided tour"
 						link="https://youtu.be/iO2S5bARsaM"

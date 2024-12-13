@@ -1,8 +1,8 @@
 .container {
-	display: flex; /* Align panels in a horizontal row */
-	flex-direction: column; /* Enable horizontal layout */
-	height: 100%; /* Full viewport height */
-	width: 100vh; /* Full width */
+	display: flex; 
+	flex-direction: column;
+	height: 100%; 
+	width: 100vh;
 }
 
 body {
@@ -37,6 +37,16 @@ html {
 	width: 100%;
 	height: 100%;
 	box-shadow: 10px 5px 5px #646cff;
+}
+
+.boxContent{
+	display: flex;
+}
+
+.buttons{
+	display: flex;
+	flex-direction: column;
+	padding: 2%
 }
 
 .projects {
@@ -79,10 +89,10 @@ html {
 
 @keyframes scroll {
   from {
-    transform: translateX(0); /* Start at the beginning */
+    transform: translateX(0); 
   }
   to {
-    transform: translateX(-100%); /* Move left by 100% of the container width */
+    transform: translateX(-100%); 
   }
 }
 
@@ -180,13 +190,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.buttons{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-  z-index: 10;
-}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

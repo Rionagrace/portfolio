@@ -11,7 +11,6 @@ const boxVariant = {
 const Box = ({ project, link, github, image }) => {
 	const control = useAnimation();
 	const [ref, inView] = useInView();
-	const [showOverlay, setShowOverlay] = useState(false)
 
 	useEffect(() => {
 		if (inView) {
@@ -30,7 +29,8 @@ const Box = ({ project, link, github, image }) => {
 			animate={control}
 		>
 			<h1>{project}</h1>
-			{showOverlay && <section className="buttons">
+			<section className="boxContent">
+			<section className="buttons">
 				<button>
 					<a href={link} target="_blank">
 						Try it out
@@ -41,9 +41,9 @@ const Box = ({ project, link, github, image }) => {
 						GitHub
 					</a>
 				</button>
-			</section>}
-			<motion.img src={image} onHoverStart={()=>{setShowOverlay(true)}} onHoverEnd={()=>{setShowOverlay(false)}} />
-			
+			</section>
+			<motion.img  src={image} whileHover={{ scale: 1.05 }} onClick={()=>{location.href = `${link}`;}} />
+			</section>
 		</motion.div>
 	);
 };

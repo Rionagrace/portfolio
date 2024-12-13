@@ -42,7 +42,8 @@ function App() {
 						find out more
 					</motion.button>
 				</motion.section>
-				<section ref={ref}>
+				<section ref={ref} style={{height: "8vh"}} id="aboutMe"></section>
+				<section >
 					<AboutMe></AboutMe>
 				</section>
 				<h1 id="projects">Projects</h1>

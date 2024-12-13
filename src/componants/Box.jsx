@@ -8,9 +8,10 @@ const boxVariant = {
 	hidden: { opacity: 0, scale: 0 },
 };
 
-const Box = ({ project, link, github, image}) => {
+const Box = ({ project, link, github, image }) => {
 	const control = useAnimation();
 	const [ref, inView] = useInView();
+	const [showOverlay, setShowOverlay] = useState(false)
 
 	useEffect(() => {
 		if (inView) {
@@ -27,14 +28,22 @@ const Box = ({ project, link, github, image}) => {
 			variants={boxVariant}
 			initial="hidden"
 			animate={control}
-
 		>
 			<h1>{project}</h1>
-			<button><a href={link} target="_blank">
-				Try it out
-			</a></button>
-			<button><a href={github} target="_blank">GitHub</a></button>
-      <img src={image} />
+			{showOverlay && <section className="buttons">
+				<button>
+					<a href={link} target="_blank">
+						Try it out
+					</a>
+				</button>
+				<button>
+					<a href={github} target="_blank">
+						GitHub
+					</a>
+				</button>
+			</section>}
+			<motion.img src={image} onHoverStart={()=>{setShowOverlay(true)}} onHoverEnd={()=>{setShowOverlay(false)}} />
+			
 		</motion.div>
 	);
 };

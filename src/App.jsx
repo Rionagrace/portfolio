@@ -21,8 +21,8 @@ function App() {
 
 	return (
 		<>
+		<NavBar />
 			<section className="container">
-				<NavBar />
 				<motion.section id="home" layout className="landing" whileInView={{ opacity: 1 }}>
 					<motion.h1
 						whileHover={{ scale: 1.05 }}
@@ -42,11 +42,11 @@ function App() {
 						find out more
 					</motion.button>
 				</motion.section>
-				<section id="aboutMe" ref={ref}>
+				<section ref={ref}>
 					<AboutMe></AboutMe>
 				</section>
-				<section id="projects" className="projects">
-					<h2>Projects</h2>
+				<h1 id="projects">Projects</h1>
+				<section  className="projects">
 					<Box
 						project="hisTOURy - build your own guided tour"
 						link="https://youtu.be/iO2S5bARsaM"

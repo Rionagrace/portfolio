@@ -9,37 +9,43 @@ import HTML from "/Users/rionamccumskay/code projects/portfolio/src/assets/logos
 import CSS from "/Users/rionamccumskay/code projects/portfolio/src/assets/logos carosel/kisspng-document-file-format-template-computer-icons-5b322a2cc8de71.3536600015300142528228.png";
 import agile from "/Users/rionamccumskay/code projects/portfolio/src/assets/logos carosel/kisspng-logo-organization-behance-computer-icons-design-all-prior-events-starweaver-5ba30468b40b40.5327594615374101527375.png";
 
+
+
 export default function Carosel() {
 	const logos = [SQL, JS, react, HTML, CSS, agile];
-  const repeatedLogos = [...logos, ...logos, ...logos];
+  const repeatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
-	let [ref, { width }] = useMeasure();
+	// let [ref, { width }] = useMeasure();
 
-	let xtranslation = useMotionValue(0);
+	// let xtranslation = useMotionValue(0);
 
-	useEffect(() => {
-   const logoWidth = window.innerWidth * 0.08
+	// useEffect(() => {
+  //  const logoWidth = window.innerWidth * 0.05
 
-		let controls;
-		const gap = 20;
-		const totalLogosWidth = repeatedLogos.length * (logoWidth + gap);
-		const finalPosition = -totalLogosWidth / 3; 
+	// 	let controls;
+	// 	const gap = 20;
+	// 	const totalLogosWidth = repeatedLogos.length * (logoWidth + gap);
+	// 	const finalPosition = -totalLogosWidth / 3; 
 
-		controls = animate(xtranslation, [0, finalPosition], {
-			ease: "linear",
-			duration: 25,
-			repeat: Infinity,
-			repeatType: "loop",
-			repeatDelay: 0,
-		});
-		return controls.stop;
-	}, [xtranslation, width, repeatedLogos.length]);
+	// 	controls = animate(xtranslation, [0, finalPosition], {
+	// 		ease: "linear",
+	// 		duration: 5,
+	// 		repeat: Infinity,
+	// 		repeatType: "loop",
+	// 		repeatDelay: 0,
+	// 	});
+	// 	return controls.stop;
+	// }, [xtranslation, width, repeatedLogos.length]);
 
 	return (
-		<motion.section className="carosel" ref={ref} style={{ x: xtranslation }}>
+    <section className="caroselContainer">
+		<motion.section className="carosel"  >
 			{repeatedLogos.map((item, index) => (
 				<img src={item} key={index} className="logo" />
 			))}
 		</motion.section>
+    </section>
 	);
+
+
 }

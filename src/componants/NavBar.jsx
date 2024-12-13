@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import {motion} from "framer-motion"
+
 function NavBar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 
@@ -21,10 +23,10 @@ function NavBar() {
 	return (
 			<header className={`navbar ${isScrolled ? "visible" : ""}`}>
 				<ul className="nav-Bar">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#aboutMe">About Me</a></li>
-          <li> <a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <motion.li whileHover={{ scale: 1.05 }}><a href="#home">Home</a></motion.li>
+          <motion.li whileHover={{ scale: 1.05 }}><a href="#aboutMe">About Me</a></motion.li>
+          <motion.li whileHover={{ scale: 1.05 }}> <a href="#projects">Projects</a></motion.li>
+          <motion.li whileHover={{ scale: 1.05 }}><a href="#contact">Contact</a></motion.li>
         </ul>
 			</header>
 	);
